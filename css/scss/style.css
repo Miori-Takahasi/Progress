@@ -1,0 +1,249 @@
+/* A Modern CSS Reset */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*----------------------------------------
+	base
+----------------------------------------*/
+body {
+  font-family: "dinosaur", "yu-gothic-pr6n", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #6c2ccc;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: top;
+}
+
+p,
+h1,
+h3 {
+  color: #29114d;
+}
+
+h2,
+li {
+  text-transform: capitalize;
+}
+
+h2 {
+  color: #6c2ccc;
+  position: relative;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+h2::before {
+  position: absolute;
+  top: -30px;
+  content: url(../../../img/roof.svg);
+}
+
+h2::after {
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  content: url(../../../img/line.svg);
+}
+
+.container {
+  max-width: 1090px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+section + section {
+  margin-top: 130px;
+}
+
+.btn-contact {
+  position: relative;
+  padding: 1rem 3rem;
+  border-radius: 33px;
+  background-color: #6c2ccc;
+  -webkit-box-shadow: 2px 3px 0px #29114d;
+          box-shadow: 2px 3px 0px #29114d;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-contact:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translate(2px, 3px);
+          transform: translate(2px, 3px);
+  opacity: 0.7;
+}
+
+.hamburger {
+  cursor: pointer;
+  border-style: none;
+  background-color: transparent;
+}
+
+.hamburger__line {
+  background-color: #29114d;
+  width: 35px;
+  height: 3px;
+  display: block;
+  margin-bottom: 9px;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+.hamburger__line:last-child {
+  margin-bottom: 0;
+}
+
+.service-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  counter-reset: number 0;
+}
+
+.service-container .service {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.service-container .service__ttl {
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #29114d;
+}
+
+.service-container .service__ttl::before {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  counter-increment: number 1;
+  content: "Point" counter(number);
+  color: #bca0ed;
+  font-size: 1.6em;
+  font-weight: normal;
+}
+
+.service-container .service__txt {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px), print {
+  .service__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .service__thumb {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

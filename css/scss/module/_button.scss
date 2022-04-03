@@ -1,0 +1,36 @@
+.btn-contact {
+  position: relative;
+  padding: 1rem 3rem;
+  border-radius: 33px;
+  background-color: $violet;
+  box-shadow: 2px 3px 0px $dViolet;
+  color: $white;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: none;
+    transform: translate(2px, 3px);
+    opacity: 0.7;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  border-style: none;
+  background-color: transparent;
+
+  &__line {
+    background-color: $dViolet;
+    width: 35px;
+    height: 3px;
+    display: block;
+    margin-bottom: 9px;
+    transition: transform 0.7s;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

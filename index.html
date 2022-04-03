@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Progress inc.</title>
+    <meta name="author" content="MioriTakahashi" />
+    <meta
+      name="description"
+      content="これは学習のための、架空の会社のWebサイトです。同名会社や類似サービスとは関係ございません。"
+    />
+    <!-- adobe font -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "nck8wrc",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <!-- /adobe font -->
+    <link rel="stylesheet" href="./css/scss/style.css" />
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <div class="header__container container">
+        <a href="#" class="logo"
+          ><img src="./img/logo.svg" alt="Progress inc." class="logo__link"
+        /></a>
+        <button class="hamburger">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+
+        <nav id="gnav" class="gnav">
+          <div class="gnav__container">
+            <ul class="gnav__list">
+              <li class="gnav__item">
+                <a href="#" class="gnav__link">top</a>
+              </li>
+              <li class="gnav__item">
+                <a href="#" class="gnav__link">service</a>
+              </li>
+              <li class="gnav__item">
+                <a href="#" class="gnav__link">voice</a>
+              </li>
+              <li class="gnav__item">
+                <a href="#" class="gnav__link">Q&A</a>
+              </li>
+            </ul>
+            <button class="gnav__item btn-contact">Contact</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="main-visual">
+      <div class="main-visual__container container">
+        <p class="main-visual__message marker-text">
+          <strong
+            >あなたのための<br />
+            スマートホーム賃貸サービス</strong
+          >
+        </p>
+        <div class="main-visual__img-sp">
+          <img src="./img/main_sp.svg" alt="main-visual" class="main1" />
+          <img src="./img/sp-phone-hand.svg" alt="main-visual2" class="main2" />
+        </div>
+
+        <h1 class="main-visual__serviceName">スマート・レント</h1>
+        <a href="#" class="main-visual__btn btn-contact">お問合せはこちら</a>
+      </div>
+    </div>
+
+    <main id="main" class="main">
+      <div class="main__container container">
+        <section id="worries" class="section">
+          <h2>Do You Have Any Worries?</h2>
+        </section>
+        <section id="merits" class="section">
+          <h2>Smart Home 3 Merits</h2>
+        </section>
+        <section id="connect" class="section">
+          <h2>スマートレントだから、叶うんです</h2>
+        </section>
+        <section id="service" class="section">
+          <div class="service-container">
+            <h2>our service</h2>
+            <div class="service">
+              <div class="service__body">
+                <h3 class="service__ttl">目的に合わせてカスタマイズ</h3>
+                <figure class="service__thumb">
+                  <img src="img/customize_sp.png" alt="イメージイラスト" />
+                </figure>
+                <p class="service__txt">
+                  初期から導入されているスマート設備（Wi-Fi・照明・エアコン・スマートロック）に加えて、お好みのスマート家電をカスタマイズ！
+                  もちろん入居と同時に使用でき、スマホから一元管理・連携できます。
+                </p>
+              </div>
+            </div>
+            <div class="service _reverse">
+              <div class="service__body">
+                <h3 class="service__ttl">安心サポート</h3>
+                <figure class="service__thumb">
+                  <img src="img/support_sp.png" alt="イメージイラスト" />
+                </figure>
+                <p class="service__txt">
+                  専門のスタッフがお客様のスマートホーム・ライフをサポート。
+                  お客様が実現したい暮らしの目的に合わせて、専門のスタッフが最適なプランをご提案します。
+                  また、お客様ご自身でご用意したスマート家電＆設備導入のサポートも可能。ご安心してお任せください。
+                </p>
+              </div>
+            </div>
+            <div class="service">
+              <div class="service__body">
+                <h3 class="service__ttl">家具・最新家電の貸し出し</h3>
+                <figure class="service__thumb">
+                  <img src="img/rental_sp.png" alt="イメージイラスト" />
+                </figure>
+                <p class="service__txt">
+                  デザイン家具や最新家電のレンタルサービスもございます。
+                  １か月単位で気軽に試せて、簡単手配で返却可能。お気に召せばそのままご購入もできます。
+                  大型家具や家電をレンタルすることで、身軽な生活も叶います。
+                </p>
+              </div>
+            </div>
+            <div class="service _reverse">
+              <div class="service__body">
+                <h3 class="service__ttl">内覧から入居までwebで完結</h3>
+                <figure class="service__thumb">
+                  <img src="img/online_sp.png" alt="イメージイラスト" />
+                </figure>
+                <p class="service__txt">
+                  内覧の予約からご契約、入居まで、ご希望によって対面の機会なしでスムーズに進められます。
+                  全戸ひかり回線の工事済なため、入居したけれどWi-Fiが使えない、なんてお悩みともおさらば。玄関のセキュリティ対策など、導入にコストやハードルがあるものでもご入居と同時に使用可能に。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="voice" class="section">
+          <h2>customer's voice</h2>
+        </section>
+        <section id="contact" class="section">
+          <h2>contact</h2>
+        </section>
+      </div>
+    </main>
+    <footer id="footer" class="footer"></footer>
+    <div class="container"></div>
+  </body>
+</html>
