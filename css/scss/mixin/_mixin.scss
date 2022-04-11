@@ -1,0 +1,41 @@
+//ブレイクポイント変数
+$sizes: sm, md, lg;
+
+//responsive
+$breakpoint-up: (
+  "sm": "screen and (min-width: 400px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1000px)",
+) !default;
+
+// max-width
+$breakpoint-down: (
+  "sm": "screen and (max-width: 399px)",
+  "md": "screen and (max-width: 767px)",
+  "lg": "screen and (max-width: 999px)",
+) !default;
+
+$breakpoint-range: (
+  "sm": "screen and (min-width: 0px) and (max-width: 399px)",
+  "md": "screen and (min-width: 400px) and (max-width: 767px)",
+  "lg": "screen and (min-width: 768px) and (max-width: 999px)",
+) !default;
+
+//mixinを定義（初期値はmd）
+@mixin mq-up($size: md) {
+  @media #{ map-get( $breakpoint-up, $size ) } {
+    @content;
+  }
+}
+
+@mixin mq-down($size: md) {
+  @media #{map-get($breakpoint-down, $size)} {
+    @content;
+  }
+}
+
+@mixin mq-range($size: md) {
+  @media #{map-get($breakpoint-range, $size)} {
+    @content;
+  }
+}
