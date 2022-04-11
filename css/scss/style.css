@@ -189,59 +189,38 @@ section + section {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 768px) {
-  .s-service__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    counter-reset: number 0;
-  }
-  .s-service__container .service {
-    margin-top: 100px;
-    margin-bottom: 20px;
-  }
-  .s-service__container .service__thumb-PC {
-    width: 50%;
-    display: none;
-  }
-  .s-service__container .service__ttl {
-    margin-bottom: 30px;
-    position: relative;
-    text-align: center;
-    border-bottom: solid;
-    border-width: 1px;
-    border-color: #29114d;
-  }
-  .s-service__container .service__ttl::before {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    counter-increment: number 1;
-    content: "Point" counter(number);
-    color: #bca0ed;
-    font-size: 1.6em;
-    font-weight: normal;
-  }
-  .s-service__container .service__txt {
-    margin-top: 30px;
-  }
+.s-service__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  counter-reset: number 0;
 }
 
-@media screen and (min-width: 768px), print {
+@media screen and (min-width: 768px) {
   .s-service__container {
     margin-top: 62px;
-    counter-reset: number 0;
   }
   .s-service__container > :first-child {
     margin-top: 0;
   }
+}
+
+.service {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
   .service {
-    margin-top: 148px;
+    margin-top: 147px;
   }
+}
+
+@media screen and (min-width: 768px) {
   .service__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -250,6 +229,29 @@ section + section {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .service__thumb {
+    display: none;
+  }
+}
+
+.service__thumb-PC {
+  width: 50%;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .service__thumb-PC {
+    display: block;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .service__body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -262,33 +264,54 @@ section + section {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+.service__ttl {
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #29114d;
+}
+
+@media screen and (min-width: 768px) {
   .service__ttl {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     position: relative;
     text-align: left;
     border: 0;
   }
+}
+
+.service__ttl::before {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  counter-increment: number 1;
+  content: "Point" counter(number);
+  color: #bca0ed;
+  font-size: 1.6em;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 999px) {
   .service__ttl::before {
-    position: absolute;
-    top: -98px;
-    left: 0;
-    counter-increment: number 1;
-    content: "Point" counter(number);
-    color: #bca0ed;
-    font-size: 1.6em;
-    font-weight: normal;
+    top: -58px;
   }
-  .service__thumb {
-    width: 50%;
-    display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .service__ttl::before {
+    top: -112px;
   }
-  .service__thumb-PC {
-    display: block;
-    width: 50%;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-    margin-right: 20px;
-  }
+}
+
+.service__txt {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
   .service._reverse .service__inner {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -296,7 +319,7 @@ section + section {
             flex-direction: row-reverse;
   }
   .service._reverse .service__thumb-PC {
-    margin-right: 20px;
+    margin-right: 0px;
     margin-left: 20px;
   }
 }
