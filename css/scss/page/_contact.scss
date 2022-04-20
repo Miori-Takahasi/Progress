@@ -1,0 +1,68 @@
+.contact {
+  &__container {
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+    background-color: $BgGray;
+    position: relative;
+    margin-top: 30px;
+
+    @include mq-up("md") {
+      margin-top: 70px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 224px;
+    height: 178px;
+    background-image: url(../../../img/mainVisual.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 32px;
+    right: 20px;
+
+    @include mq-range("md") {
+      width: 224 * 2px;
+      height: 178 * 2px;
+    }
+
+    @include mq-up("md") {
+      width: 567px;
+      height: 452px;
+    }
+  }
+
+  &__body {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    @include mq-up("md") {
+      margin-left: 139px;
+      margin-right: 139px;
+      text-align: left;
+    }
+  }
+
+  &__ttl {
+    text-align: left;
+    font-size: 2rem;
+    padding-top: 200px;
+  }
+
+  &__txt {
+    text-align: left;
+    margin-top: 46px;
+    line-height: 2;
+  }
+
+  &__btn {
+    margin-top: 43px;
+    margin-bottom: 58px;
+
+    @include mq-up("md") {
+      margin-top: 69px;
+      margin-bottom: 203px;
+    }
+  }
+}

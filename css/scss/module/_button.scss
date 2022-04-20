@@ -1,6 +1,8 @@
 .btn-contact {
-  position: relative;
-  padding: 1rem 3rem;
+  // position: relative;
+  display: inline-block;
+  min-width: 200px;
+  padding: 1rem 4rem;
   border-radius: 33px;
   background-color: $violet;
   box-shadow: 2px 3px 0px $dViolet;
