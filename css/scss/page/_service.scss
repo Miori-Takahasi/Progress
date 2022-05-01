@@ -37,12 +37,24 @@
         display: block;
         flex-shrink: 0;
         margin-right: 20px;
+        position: relative;
+      }
+
+      &::before {
+        position: absolute;
+        right: -95px;
+        counter-increment: number 1;
+        content: "Point" counter(number);
+        color: $lViolet;
+        font-size: 1.6em;
+        font-weight: normal;
       }
     }
   }
 
   &__body {
     @include mq-up("md") {
+      height: 326px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -52,7 +64,6 @@
   &__ttl {
     margin-bottom: 30px;
     position: relative;
-    text-align: center;
     border-bottom: solid;
     border-width: 1px;
     border-color: $dViolet;
@@ -62,27 +73,11 @@
       text-align: left;
       border: 0;
     }
-
-    &::before {
-      position: absolute;
-      top: -50px;
-      left: 0;
-      counter-increment: number 1;
-      content: "Point" counter(number);
-      color: $lViolet;
-      font-size: 1.6em;
-      font-weight: normal;
-      @include mq-down("lg") {
-        top: -58px;
-      }
-      @include mq-up("lg") {
-        top: -112px;
-      }
-    }
   }
 
   &__txt {
     margin-top: 30px;
+    text-align: left;
   }
   @include mq-up("md") {
     &._reverse {
@@ -94,6 +89,10 @@
           &-PC {
             margin-right: 0px;
             margin-left: 20px;
+            &::before {
+              left: -450px;
+              right: 0px;
+            }
           }
         }
       }
