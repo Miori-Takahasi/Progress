@@ -254,11 +254,23 @@ section + section {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-right: 20px;
+    position: relative;
   }
+}
+
+.service__thumb-PC::before {
+  position: absolute;
+  right: -95px;
+  counter-increment: number 1;
+  content: "Point" counter(number);
+  color: #bca0ed;
+  font-size: 1.6em;
+  font-weight: normal;
 }
 
 @media screen and (min-width: 768px) {
   .service__body {
+    height: 326px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -275,7 +287,6 @@ section + section {
 .service__ttl {
   margin-bottom: 30px;
   position: relative;
-  text-align: center;
   border-bottom: solid;
   border-width: 1px;
   border-color: #29114d;
@@ -290,31 +301,9 @@ section + section {
   }
 }
 
-.service__ttl::before {
-  position: absolute;
-  top: -50px;
-  left: 0;
-  counter-increment: number 1;
-  content: "Point" counter(number);
-  color: #bca0ed;
-  font-size: 1.6em;
-  font-weight: normal;
-}
-
-@media screen and (max-width: 999px) {
-  .service__ttl::before {
-    top: -58px;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .service__ttl::before {
-    top: -112px;
-  }
-}
-
 .service__txt {
   margin-top: 30px;
+  text-align: left;
 }
 
 @media screen and (min-width: 768px) {
@@ -327,6 +316,10 @@ section + section {
   .service._reverse .service__thumb-PC {
     margin-right: 0px;
     margin-left: 20px;
+  }
+  .service._reverse .service__thumb-PC::before {
+    left: -450px;
+    right: 0px;
   }
 }
 
