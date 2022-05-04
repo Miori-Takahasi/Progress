@@ -54,7 +54,7 @@
 
   &__body {
     @include mq-up("md") {
-      height: 326px;
+      // height: 326px;
       display: flex;
       flex-direction: column;
       justify-content: center;

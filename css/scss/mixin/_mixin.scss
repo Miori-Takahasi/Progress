@@ -39,3 +39,24 @@ $breakpoint-range: (
     @content;
   }
 }
+
+// circleのmixin
+@mixin circle($BgColor) {
+  position: relative;
+  display: inline-block;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: $BgColor;
+}
+
+@mixin circle__inner($Color) {
+  color: $Color;
+  display: inline-block;
+  width: 76px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  text-align: center;
+}
