@@ -1,0 +1,113 @@
+.s-worries {
+  margin-top: 153px;
+
+  &__container {
+    background-color: $BgGray;
+    box-shadow: 4px 6px 0px $violet;
+    border-radius: 10px;
+    margin-top: 29px;
+    @include mq-up {
+      text-align: center;
+    }
+  }
+
+  &__ttl {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 28px;
+    @include mq-up {
+      margin-top: 73px;
+      position: relative;
+      display: inline-block;
+      padding: 0 80px;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 72px;
+        height: 1px;
+        background-color: $dViolet;
+      }
+      &::before {
+        left: 0;
+      }
+      &::after {
+        right: 0;
+      }
+    }
+    & span {
+      background-image: none;
+    }
+  }
+  &__inner {
+    @include mq-up("md") {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.worries {
+  margin-top: 54px;
+  @include mq-up("md") {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 84px;
+    margin-bottom: 116px;
+  }
+
+  &:first-of-type {
+    margin-top: 14px;
+    @include mq-up("md") {
+      margin-top: 84px;
+    }
+  }
+  &:last-of-type {
+    padding-bottom: 54px;
+    @include mq-up {
+      padding: 0;
+    }
+  }
+
+  &__circle {
+    @include circle($lViolet);
+    opacity: 0.7;
+    transform: translate(9px, 38px);
+    @include mq-up {
+      display: none;
+    }
+
+    & p {
+      @include circle__inner($lYellow);
+    }
+    & span {
+      font-size: 40px;
+      line-height: 0.5;
+    }
+  }
+
+  &__ttl {
+    font-size: 1.2rem;
+    width: 75%;
+    border-bottom: solid 1px $dViolet;
+    text-align: center;
+    margin: 0 auto;
+    @include mq-up {
+      border: 0;
+      display: inline-block;
+      width: 209px;
+      background-color: $white;
+      padding: 10px 5px;
+      border-radius: 23px;
+      font-size: 15px;
+    }
+  }
+
+  &__thumb {
+    max-width: 80%;
+    margin: 16px auto 0;
+  }
+}
