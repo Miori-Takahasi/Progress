@@ -3,7 +3,7 @@
   flex-direction: column;
   counter-reset: number 0;
 
-  @include mq-up("md") {
+  @include mq-up('md') {
     margin-top: 62px;
 
     & > :first-child {
@@ -14,26 +14,26 @@
 .service {
   margin-top: 100px;
   margin-bottom: 20px;
-  @include mq-up("md") {
+  @include mq-up('md') {
     margin-top: 147px;
   }
 
   &__inner {
-    @include mq-up("md") {
+    @include mq-up('md') {
       display: flex;
       justify-content: space-between;
     }
   }
 
   &__thumb {
-    @include mq-up("md") {
+    @include mq-up('md') {
       display: none;
     }
     &-PC {
       width: 50%;
       display: none;
 
-      @include mq-up("md") {
+      @include mq-up('md') {
         display: block;
         flex-shrink: 0;
         margin-right: 20px;
@@ -44,7 +44,7 @@
         position: absolute;
         right: -95px;
         counter-increment: number 1;
-        content: "Point" counter(number);
+        content: 'Point' counter(number);
         color: $lViolet;
         font-size: 1.6em;
         font-weight: normal;
@@ -53,7 +53,7 @@
   }
 
   &__body {
-    @include mq-up("md") {
+    @include mq-up('md') {
       // height: 326px;
       display: flex;
       flex-direction: column;
@@ -62,12 +62,13 @@
   }
 
   &__ttl {
+    text-align: center;
     margin-bottom: 30px;
     position: relative;
     border-bottom: solid;
     border-width: 1px;
     border-color: $dViolet;
-    @include mq-up("md") {
+    @include mq-up('md') {
       margin-bottom: 0px;
       position: relative;
       text-align: left;
@@ -79,7 +80,7 @@
     margin-top: 30px;
     text-align: left;
   }
-  @include mq-up("md") {
+  @include mq-up('md') {
     &._reverse {
       .service {
         &__inner {

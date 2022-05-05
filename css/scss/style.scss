@@ -1,13 +1,14 @@
 @charset "utf-8";
 
-@import "base/reset";
-@import "setting/variables";
-@import "mixin/mixin";
+@import 'base/reset';
+@import 'setting/variables';
+@import 'mixin/mixin';
 
-@import "base/base";
-@import "module/button";
-@import "module/decoration";
+@import 'base/base';
+@import 'module/button';
+@import 'module/decoration';
 
-@import "page/worries";
-@import "page/service";
-@import "page/contact";
+@import 'page/worries';
+@import 'page/merits';
+@import 'page/service';
+@import 'page/contact';
