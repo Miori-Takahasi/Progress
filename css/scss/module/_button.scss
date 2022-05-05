@@ -36,3 +36,33 @@
     }
   }
 }
+
+.btn-arrow {
+  display: inline-block;
+  width: 100px;
+  padding: 10px 30px 10px 20px;
+  text-align: center;
+  color: $violet;
+  margin: 5px;
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 64px;
+    width: 20px;
+    height: 5px;
+    border: none;
+    border-right: 2px solid $violet;
+    border-bottom: 1px solid $violet;
+    transform: skew(45deg);
+    transition: 0.3s;
+  }
+  &:hover::after {
+    right: -5px;
+    width: 30px;
+  }
+}

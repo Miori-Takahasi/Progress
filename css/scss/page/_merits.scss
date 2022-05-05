@@ -1,4 +1,4 @@
-.s-worries {
+.s-merits {
   margin-top: 153px;
 
   &__container {
@@ -42,6 +42,7 @@
       }
     }
   }
+
   &__inner {
     @include mq-up('md') {
       display: flex;
@@ -50,15 +51,14 @@
   }
 }
 
-.worries {
+.merits {
   margin-top: 54px;
   @include mq-up('md') {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-top: 84px;
     margin-bottom: 116px;
   }
-
   &:first-of-type {
     margin-top: 14px;
     @include mq-up('md') {
@@ -71,17 +71,15 @@
       padding: 0;
     }
   }
-
   &__circle {
-    @include circle($lViolet);
-    opacity: 0.7;
+    @include circle($lYellow);
     transform: translate(9px, 38px);
     @include mq-up {
       display: none;
     }
 
     & p {
-      @include circle__inner($lYellow);
+      @include circle__inner($lViolet);
     }
     & span {
       font-size: 40px;
@@ -97,6 +95,7 @@
     margin: 0 auto;
     @include mq-up {
       border: 0;
+      order: 2;
       display: inline-block;
       width: 209px;
       background-color: $white;
@@ -107,7 +106,21 @@
   }
 
   &__thumb {
+    order: 1;
     max-width: 80%;
     margin: 16px auto 0;
+  }
+
+  &__txt {
+    order: 3;
+    padding: 1.5rem;
+    text-align: left;
+    position: relative;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
   }
 }
