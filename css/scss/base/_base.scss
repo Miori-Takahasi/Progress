@@ -2,10 +2,11 @@
 	base
 ----------------------------------------*/
 body {
-  font-family: "dinosaur", "yu-gothic-pr6n", sans-serif;
+  font-family: 'dinosaur', 'yu-gothic-pr6n', sans-serif;
   box-sizing: border-box;
   line-height: 1.7;
   letter-spacing: 0.06em;
+  counter-reset: number-sp;
 }
 
 main {
