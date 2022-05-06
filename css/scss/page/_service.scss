@@ -32,12 +32,12 @@
     &-PC {
       width: 50%;
       display: none;
-
       @include mq-up('md') {
         display: block;
         flex-shrink: 0;
         margin-right: 20px;
         position: relative;
+
         &::before {
           position: absolute;
           right: -95px;
