@@ -720,16 +720,14 @@ section + section {
     margin-left: 20px;
   }
   .service._reverse .service__thumb-PC::before {
-    left: -395px;
+    left: -100%;
     right: 0px;
   }
 }
 
 .contact__container {
-  margin: 0 calc(50% - 50vw);
   width: 100vw;
   background-color: #f0f0f0;
-  position: relative;
   margin-top: 30px;
 }
 
@@ -739,8 +737,15 @@ section + section {
   }
 }
 
+.contact__body {
+  position: relative;
+  max-width: 1090px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .contact__img {
-  display: block;
   width: 224px;
   height: 178px;
   background-image: url(../../../img/mainVisual.svg);
@@ -762,20 +767,6 @@ section + section {
   .contact__img {
     width: 567px;
     height: 452px;
-  }
-}
-
-.contact__body {
-  margin-left: 20px;
-  margin-right: 20px;
-  text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .contact__body {
-    margin-left: 139px;
-    margin-right: 139px;
-    text-align: left;
   }
 }
 
