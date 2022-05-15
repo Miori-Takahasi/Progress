@@ -1,10 +1,9 @@
 .contact {
   &__container {
-    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     background-color: $BgGray;
-
     margin-top: 30px;
-
     @include mq-up('md') {
       margin-top: 70px;
     }
@@ -16,6 +15,10 @@
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
+    text-align: center;
+    @include mq-up('md') {
+      text-align: left;
+    }
   }
   &__img {
     width: 224px;

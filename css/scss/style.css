@@ -726,7 +726,8 @@ section + section {
 }
 
 .contact__container {
-  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   background-color: #f0f0f0;
   margin-top: 30px;
 }
@@ -743,6 +744,13 @@ section + section {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__body {
+    text-align: left;
+  }
 }
 
 .contact__img {
