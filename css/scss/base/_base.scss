@@ -7,6 +7,7 @@ body {
   line-height: 1.7;
   letter-spacing: 0.06em;
   counter-reset: number-sp;
+  font-size: 15px;
 }
 
 main {
@@ -19,7 +20,6 @@ li {
 a {
   color: $violet;
   text-decoration: none;
-  font-size: 15px;
 }
 
 button {
