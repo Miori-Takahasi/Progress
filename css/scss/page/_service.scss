@@ -1,16 +1,19 @@
-.s-service__container {
-  display: flex;
-  flex-direction: column;
-  counter-reset: number 0;
+.s-service {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    counter-reset: number 0;
 
-  @include mq-up('md') {
-    margin-top: 62px;
+    @include mq-up('md') {
+      margin-top: 62px;
 
-    & > :first-child {
-      margin-top: 0;
+      & > :first-child {
+        margin-top: 0;
+      }
     }
   }
 }
+
 .service {
   margin-top: 100px;
   margin-bottom: 20px;

@@ -1,0 +1,35 @@
+.connect {
+  text-align: center;
+  font-size: 1.933em;
+  letter-spacing: 0.3em;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 250px;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 71px;
+    background: $violet;
+    margin-bottom: 35px;
+  }
+  &::after {
+    position: absolute;
+    left: 50%;
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 71px;
+    background: $violet;
+    margin-top: 95px;
+  }
+
+  &__ttl {
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  & .brackets {
+    letter-spacing: 0.08em;
+  }
+}

@@ -237,6 +237,30 @@ section + section {
   border-bottom: solid 1px #29114d;
 }
 
+.brackets::before {
+  position: absolute;
+  top: 0;
+  left: 0.4em;
+  content: '';
+  background-image: url(../../../img/brackets_before.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.brackets::after {
+  position: absolute;
+  bottom: 0;
+  right: 0.2em;
+  content: '';
+  background-image: url(../../../img/brackets_after.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
 .s-worries {
   margin-top: 153px;
 }
@@ -585,6 +609,45 @@ section + section {
   right: 10px;
   bottom: -10px;
   display: inline-block;
+}
+
+.connect {
+  text-align: center;
+  font-size: 1.933em;
+  letter-spacing: 0.3em;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 250px;
+}
+
+.connect::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 71px;
+  background: #6c2ccc;
+  margin-bottom: 35px;
+}
+
+.connect::after {
+  position: absolute;
+  left: 50%;
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 71px;
+  background: #6c2ccc;
+  margin-top: 95px;
+}
+
+.connect__ttl {
+  position: relative;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.connect .brackets {
+  letter-spacing: 0.08em;
 }
 
 .s-service__container {
