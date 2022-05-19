@@ -66,7 +66,8 @@
     }
   }
   &:last-of-type {
-    padding-bottom: 54px;
+    // margin-bottom: 54px;
+    padding-bottom: 10px;
     @include mq-up {
       padding: 0;
     }
@@ -112,17 +113,22 @@
     margin: 16px auto 0;
   }
 
-  &__txt {
-    height: 50%;
-    order: 3;
-    padding: 1.5rem;
-    text-align: left;
+  &__body {
     position: relative;
+
+    order: 2;
+  }
+  &__txt {
+    font-size: 12px;
+    height: 90px;
+    padding: 1rem;
+    text-align: left;
   }
 
   &__btn {
     position: absolute;
-    bottom: -10px;
     right: 10px;
+    bottom: -10px;
+    display: inline-block;
   }
 }

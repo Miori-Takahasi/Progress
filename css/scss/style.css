@@ -78,6 +78,7 @@ body {
   line-height: 1.7;
   letter-spacing: 0.06em;
   counter-reset: number-sp;
+  font-size: 15px;
 }
 
 main {
@@ -91,7 +92,6 @@ li {
 a {
   color: #6c2ccc;
   text-decoration: none;
-  font-size: 15px;
 }
 
 button {
@@ -199,7 +199,6 @@ section + section {
 .btn-arrow {
   display: inline-block;
   width: 100px;
-  padding: 10px 30px 10px 20px;
   text-align: center;
   color: #6c2ccc;
   margin: 5px;
@@ -211,8 +210,8 @@ section + section {
   content: '';
   display: inline-block;
   position: absolute;
-  top: calc(50% - 1px);
-  left: 64px;
+  top: 50%;
+  right: 10px;
   width: 20px;
   height: 5px;
   border: none;
@@ -236,6 +235,30 @@ section + section {
 
 .underline {
   border-bottom: solid 1px #29114d;
+}
+
+.brackets::before {
+  position: absolute;
+  top: 0;
+  left: 0.4em;
+  content: '';
+  background-image: url(../../../img/brackets_before.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.brackets::after {
+  position: absolute;
+  bottom: 0;
+  right: 0.2em;
+  content: '';
+  background-image: url(../../../img/brackets_after.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
 }
 
 .s-worries {
@@ -492,7 +515,7 @@ section + section {
 }
 
 .merits:last-of-type {
-  padding-bottom: 54px;
+  padding-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -567,20 +590,64 @@ section + section {
   margin: 16px auto 0;
 }
 
-.merits__txt {
-  height: 50%;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  padding: 1.5rem;
-  text-align: left;
+.merits__body {
   position: relative;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.merits__txt {
+  font-size: 12px;
+  height: 90px;
+  padding: 1rem;
+  text-align: left;
 }
 
 .merits__btn {
   position: absolute;
-  bottom: -10px;
   right: 10px;
+  bottom: -10px;
+  display: inline-block;
+}
+
+.connect {
+  text-align: center;
+  font-size: 1.933em;
+  letter-spacing: 0.3em;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 250px;
+}
+
+.connect::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 71px;
+  background: #6c2ccc;
+  margin-bottom: 35px;
+}
+
+.connect::after {
+  position: absolute;
+  left: 50%;
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 71px;
+  background: #6c2ccc;
+  margin-top: 95px;
+}
+
+.connect__ttl {
+  position: relative;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.connect .brackets {
+  letter-spacing: 0.08em;
 }
 
 .s-service__container {
