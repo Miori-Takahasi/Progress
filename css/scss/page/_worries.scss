@@ -105,6 +105,9 @@
       border-radius: 23px;
       font-size: 15px;
     }
+    @include mq-range('sm') {
+      font-size: 1rem;
+    }
   }
 
   &__thumb {

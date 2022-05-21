@@ -39,11 +39,12 @@ h1,
 h3 {
   color: $dViolet;
 }
-
+h1,
 h2,
 h3,
 li {
   text-transform: capitalize;
+  white-space: nowrap;
 }
 
 h2 {

@@ -8,25 +8,38 @@
 
 .brackets {
   &::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0.4em;
-    content: '';
     background-image: url(../../../img/brackets_before.svg);
     background-repeat: no-repeat;
+    background-size: contain;
     display: inline-block;
     width: 40px;
     height: 40px;
+
+    @include mq-range('sm') {
+      width: 20px;
+      height: 20px;
+    }
   }
   &::after {
+    content: '';
     position: absolute;
     bottom: 0;
     right: 0.2em;
-    content: '';
     background-image: url(../../../img/brackets_after.svg);
     background-repeat: no-repeat;
+    background-size: contain;
     display: inline-block;
     width: 40px;
     height: 40px;
+
+    @include mq-range('sm') {
+      width: 20px;
+      height: 20px;
+      right: 0;
+    }
   }
 }

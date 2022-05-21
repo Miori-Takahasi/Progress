@@ -5,6 +5,9 @@
   white-space: nowrap;
   position: relative;
   margin-bottom: 250px;
+  @include mq-range('sm') {
+    font-size: 1.2rem;
+  }
   &::before {
     content: '';
     display: inline-block;

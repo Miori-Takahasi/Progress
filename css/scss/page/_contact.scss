@@ -31,8 +31,8 @@
     right: 20px;
 
     @include mq-range('md') {
-      width: 224 * 2px;
-      height: 178 * 2px;
+      width: 50%;
+      height: 50%;
     }
 
     @include mq-up('md') {
