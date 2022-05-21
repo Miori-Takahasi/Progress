@@ -1,0 +1,56 @@
+.footer {
+  width: 100vw;
+  background-color: $dViolet;
+  & .container {
+    padding-top: 42px;
+  }
+  &__logo-icon {
+    display: flex;
+    justify-content: space-between;
+    @include mq-up {
+      margin-bottom: 148px;
+    }
+  }
+  &__contact {
+    display: flex;
+    & li {
+      & img {
+        margin: 0 10px;
+      }
+    }
+  }
+  &__nav {
+    margin-top: 33px;
+    @include mq-up {
+      display: none;
+    }
+    & ul {
+      padding-left: 0;
+    }
+    & li {
+      margin-bottom: 12px;
+      & a {
+        color: $white;
+      }
+    }
+  }
+  &__nav-PC {
+    @extend .footer__nav;
+    display: none;
+    @include mq-up {
+      display: block;
+      margin-top: 0;
+      & ul {
+        display: flex;
+        & li {
+          padding: 0 44px;
+        }
+      }
+    }
+  }
+  &__copy-right {
+    color: $white;
+    font-size: 12px;
+    text-align: center;
+  }
+}
